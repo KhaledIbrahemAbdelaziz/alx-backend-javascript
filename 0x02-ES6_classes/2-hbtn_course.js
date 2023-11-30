@@ -4,17 +4,21 @@ class HolbertonCourse {
     this.length = length;
     this.students = students;
   }
+
   /**
    * @param {String} name
    */
   set name(name) {
-    if (typeof name !== 'string')
+    if (typeof name !== 'string') {
       throw new TypeError('Name must be a string');
-      this._name = name;
+    }
+    this._name = name;
   }
+
   get name() {
     return this._name;
   }
+
   /**
    * @param {Number} length
    */
